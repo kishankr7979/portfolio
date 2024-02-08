@@ -1,0 +1,16 @@
+@font-face {
+	font-family: "terminal";
+	src: local("VT323"),url("./VT323/VT323-Regular.ttf") format("truetype");
+}
+
+html body {
+	margin: 0 auto;
+	padding: 0;
+	height: 100vh;
+	width: 100vw;
+	#app {
+		height: 100%;
+		width: 100%;
+	}
+}
+
