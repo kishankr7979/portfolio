@@ -89,53 +89,96 @@ export const displayMode = {
 export const portfolioData = {
     intro: {
         name: 'Kishan Kumar',
-        title: 'Full stack Engineer'
+        title: 'Full Stack Engineer',
+        email: 'kishankr.0210@gmail.com',
+        mobile: '+91-7979060284',
+        portfolio: 'Kishan Kumar',
+        linkedin: 'Kishan Kumar',
+        github: 'Kishan Kumar'
     },
-    "experience": [
+    experience: [
         {
-            "role": "Software Engineer 2",
-            "company": "BukuWarung",
-            "duration": "April-2023 - Present"
+            role: "Software Development Engineer 2",
+            company: "SaaS Labs",
+            location: "Noida, India",
+            duration: "May 2025 – Present",
+            highlights: [
+                "Primarily work on JustCall platform",
+                "Built integrations with third-party platforms, increasing feature adoption by 15%",
+                "Migrated frontend from PHP-based pages to a modern Remix application, reducing page load time by 40%",
+                "Developed iframe-sync SDK to keep PHP and Remix iframe URLs in sync during navigation, improving user flow consistency",
+                "Optimized critical rendering paths and caching, reducing Time-to-Interactive (TTI) by 1.2s"
+            ]
         },
         {
-            "role": "Software Engineer 1",
-            "company": "BukuWarung",
-            "duration": "Jan-2023 - Mar 2023"
+            role: "Software Engineer 2",
+            company: "BukuWarung",
+            location: "Hyderabad, India",
+            duration: "Apr 2023 – Apr 2025",
+            highlights: [
+                "Part of Experience, Rewards Loyalty Platform Team and Electronics payments",
+                "Developed EDC sales order flow with order, cart and payment management",
+                "Developed AI-driven drag-and-drop form builder for internal use cases",
+                "Developed common interface layer in frontend projects to share Android bridge functionalities",
+                "Built Secure Transfer SDK for session-based HTTP transactions using cryptographic key exchange"
+            ]
         },
         {
-            "role": "Software Engineer Intern",
-            "company": "BukuWaring",
-            "duration": "July-2022 - Dec-2021"
-        },
-        // ... more experience items
-    ],
-    "projects": [
-        {
-            "name": "Game1N",
-            "description": "Game1n, we call it linkedIn for gamers. A dedicated social media platform for gamers out there inorder to\n" +
-                "disrupt Billion dollar e-sports industry. as of now we have our base layer ready with authentication and account\n" +
-                "management"
+            role: "Software Engineer 1",
+            company: "BukuWarung",
+            location: "Remote",
+            duration: "Jan 2022 – Mar 2023",
+            highlights: [
+                "Developed configurable package management UI modules in React.js & TypeScript",
+                "Implemented reusable and configurable UI components in Vue.js, React.js, and Next.js",
+                "Refactored webview architecture and improved performance by 30%",
+                "Developed Bukuwarung web app from scratch and added payments and digital products"
+            ]
         },
         {
-            "name": "Leftout",
-            "description": "A dedicated travel tech platform for solo traveller who wanted to explore this world with strangers"
-        },
-        {
-            "name": "t8 CMS",
-            "description": "A configurable content management system(open source) that can be used by any organisation free of cost, just need to plug your databse(supabase) and ready to deliver high content like blogs"
-        },
-        // ... more project items
-    ],
-    "education": [
-        {
-            "degree": "B.Tech in ECE",
-            "institution": "DIT Univeristy, Dehradun"
-        },
-        {
-            "degree": "AISCE",
-            "institution": "SAPS, Bokaro"
+            role: "Software Engineer Intern",
+            company: "BukuWarung",
+            location: "Bengaluru, India",
+            duration: "Jul 2021 – Dec 2021",
+            highlights: [
+                "Interned as Full-stack Intern; implemented Internal Customer Support Tool",
+                "Developed serverless interface for Customer Support Tool",
+                "Developed experiment-based feature for core BukuWarung application, increasing retention by 5%"
+            ]
         }
     ],
-    "Skills": "Languages: TypeScript, JavaScript, HTML, CSS Technologies: Next.Js, React.Js, Vue.Js, Node.js, AWS"
-
+    projects: [
+        {
+            name: "Game1N",
+            description: "Game1n, LinkedIn for gamers. A dedicated social media platform for gamers to disrupt the billion-dollar e-sports industry. Base layer ready with authentication and account management."
+        },
+        {
+            name: "Leftout",
+            description: "A dedicated travel tech platform for solo travellers who want to explore the world with strangers."
+        },
+        {
+            name: "t8 CMS",
+            description: "A configurable content management system (open source) that can be used by any organisation free of cost. Just plug in Supabase as database and deliver high-content like blogs instantly."
+        }
+    ],
+    education: [
+        {
+            degree: "B.Tech in Electronics & Communication",
+            institution: "DIT University, Dehradun, India",
+            duration: "Aug 2018 – Jun 2022",
+            cgpa: "7.42"
+        },
+        {
+            degree: "AISSCE",
+            institution: "SAPS, Bokaro, India",
+            duration: "Aug 2017 – May 2018",
+            percentage: "71.60%"
+        }
+    ],
+    Skills: "TypeScript, JavaScript, HTML, Next.js, Remix.js, React.js, Vue.js, Node.js, AWS, React Native",
+    achievements: [
+        "5★ in C++ on HackerRank",
+        "3★ on CodeChef",
+        "3★ on LeetCode"
+    ]
 }
