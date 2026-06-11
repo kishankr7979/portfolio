@@ -12,11 +12,21 @@ import {useState} from "preact/hooks";
 import {GlobalContext} from "./context/GlobalContext";
 
 export function App() {
-	const [appStore, setAppStore] = useState({
-		isCLIActive: true,
+	const [appStore, setAppStore] = useState(() => {
+		const params = new URLSearchParams(typeof window !== 'undefined' ? window.location.search : '');
+		const mode = params.get('mode');
+		if (mode) {
+			return { isCLIActive: mode === 'cli' || mode === 'terminal' };
+		}
+		// Fallback to local storage or default to GUI for standard landing, but support CLI default
+		const saved = typeof window !== 'undefined' ? localStorage.getItem('userPreference') : null;
+		if (saved) {
+			return { isCLIActive: saved === 'CLI' };
+		}
+		return { isCLIActive: false }; // Default to GUI for a stunning visual first impression
 	});
 
-	const updateStore = (val) => setAppStore(val);
+	const updateStore = (val) => setAppStore(prevState => ({ ...prevState, ...val }));
 
 	const value = {
 		appStore,
