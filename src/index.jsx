@@ -1,7 +1,5 @@
 import { render } from 'preact';
 import { LocationProvider, Router, Route } from 'preact-iso';
-import { ChakraProvider } from '@chakra-ui/react'
-import * as ReactDOM from 'react-dom/client'
 
 
 import { Home } from './pages/Home/index.jsx';
@@ -36,12 +34,10 @@ export function App() {
 	return (
 		<LocationProvider>
 			<GlobalContext.Provider value={value}>
-			<ChakraProvider>
 				<Router>
 					<Route path="/" component={Home} />
 					<Route default component={NotFound} />
 				</Router>
-			</ChakraProvider>
 			</GlobalContext.Provider>
 		</LocationProvider>
 	);
