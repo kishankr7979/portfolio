@@ -17,8 +17,9 @@ export const portfolioData = {
         mobile: "+91-7979060284",
         github: "github.com/kishankr7979",
         linkedin: "linkedin.com/in/kishan-k-12052a168",
-        portfolio: "kishankr7979.github.io",
-        summary: "Full-stack product engineer with 4+ years of experience building scalable web platforms, SDKs, and performance-critical systems in fintech and SaaS environments."
+        portfolio: "me.lastgood.space",
+        resumeUrl: "https://drive.google.com/file/d/1J6kgGD9TO_gjpFbZYm1500N-NhjP9e1y/view",
+        summary: "Senior software engineer with 5+ years of experience building scalable web platforms, SDKs, and performance-critical systems in fintech and SaaS environments."
     },
     experience: [
         {
@@ -55,28 +56,38 @@ export const portfolioData = {
                 "Built configurable and reusable UI platform components across React, Vue, and Next.js ecosystems.",
                 "Developed BukuWarung web application from scratch, integrating payments and digital product flows."
             ]
+        },
+        {
+            role: "Software Engineer Intern",
+            company: "BukuWarung",
+            duration: "Jul 2021 – Dec 2021",
+            highlights: []
         }
     ],
     projects: [
         {
             name: "LastGood",
             url: "https://www.lastgood.space/",
-            description: "A production incident time-travel and MTTR reduction tool for engineering and SRE teams. It mathematical ranks likely causes of an outage by aggregating and creating a unified ranked timeline of deployments, commits, and infrastructure changes immediately preceding the incident.",
-            technologies: ["React", "Node.js", "Express", "Supabase", "SRE Tools"]
+            status: "Live beta",
+            description: "Incident-response tool for engineering and SRE teams. When production breaks, it answers \"what changed?\" by pulling deploys, commits and feature-flag flips into one timeline and mathematically ranking the likely causes. Solo-built: React console, Node backend, GitHub App ingestion, async AI diagnosis.",
+            technologies: ["React", "Node.js", "Postgres / TimescaleDB", "BullMQ + Redis", "GitHub App", "Docker", "AWS"]
         },
         {
             name: "Game1N",
-            description: "Dedicated social media platform for gamers (LinkedIn for gamers) to disrupt the e-sports industry. Base layer ready with authentication and profile management.",
+            status: "Side project",
+            description: "A social network for gamers, like LinkedIn for gamers. Base layer ready with authentication and profile management.",
             technologies: ["React", "Node.js", "MongoDB", "WebSockets"]
         },
         {
             name: "t8 CMS",
+            status: "Side project",
             description: "Configurable open-source Content Management System. Just plug in Supabase as a database and deliver rich content like blogs instantly.",
             technologies: ["Next.js", "Supabase", "TailwindCSS"]
         },
         {
             name: "Leftout",
-            description: "A travel tech platform designed for solo travelers looking to explore the world with like-minded strangers.",
+            status: "Side project",
+            description: "A travel platform designed for solo travelers looking to explore the world with like-minded strangers.",
             technologies: ["React Native", "Node.js", "Google Maps API"]
         }
     ],
@@ -114,8 +125,8 @@ export const dataMap = (val) => {
             `=======================================`,
             portfolioData.intro.summary,
             "",
-            "Passionate about building highly-optimized web applications, custom SDKs,",
-            "and cross-platform WebView-native bridge components."
+            "Mostly React and Node. Lately: LastGood, an incident tool that answers",
+            "\"what changed?\" when production breaks."
         ],
         resume: [
             "Opening Resume...",
@@ -124,8 +135,8 @@ export const dataMap = (val) => {
         ],
         experience: portfolioData.experience.reduce((acc, exp) => {
             acc.push(
-                `⚡ ${exp.role} @ ${exp.company}`,
-                `   Location: ${exp.location} | Duration: ${exp.duration}`,
+                `${exp.role} @ ${exp.company}`,
+                `   ${exp.location ? `Location: ${exp.location} | ` : ""}Duration: ${exp.duration}`,
                 `   -------------------------------------------------`
             );
             exp.highlights.forEach(highlight => {
@@ -135,7 +146,7 @@ export const dataMap = (val) => {
             return acc;
         }, []),
         skills: [
-            "⚙️ Technical Skills & Architecture",
+            "Technical Skills & Architecture",
             "==================================",
             `* Languages:      ${portfolioData.skills.languages.join(", ")}`,
             `* Frontend:       ${portfolioData.skills.frontend.join(", ")}`,
@@ -146,7 +157,7 @@ export const dataMap = (val) => {
         ],
         projects: portfolioData.projects.reduce((acc, proj) => {
             acc.push(
-                `🚀 ${proj.name} ${proj.url ? `(${proj.url})` : ""}`,
+                `${proj.name}${proj.status ? ` [${proj.status}]` : ""}${proj.url ? ` ${proj.url}` : ""}`,
                 `   Description: ${proj.description}`,
                 `   Tech Stack:  ${proj.technologies.join(", ")}`,
                 ""
@@ -154,7 +165,7 @@ export const dataMap = (val) => {
             return acc;
         }, []),
         contact: [
-            "📞 Let's Connect!",
+            "Let's Connect!",
             "=================",
             `* Email:    ${portfolioData.intro.email}`,
             `* LinkedIn: ${portfolioData.intro.linkedin}`,
